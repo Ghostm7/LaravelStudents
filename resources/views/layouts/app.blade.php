@@ -67,10 +67,10 @@
     <!-- Header -->
     <nav>
         <ul>
-            <li><a href="Home">Home</a></li>
-            <li><a href="About">About</a></li>
-            <li><a href="Service">Service</a></li>
-            <li><a href="ContactUs">Contact Us</a></li>
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About</a></li>
+            <li><a href="{{ route('service') }}">Service</a></li>
+            <li><a href="{{ route('contact_us') }}">Contact Us</a></li>
             <li><a href="/Login">Login</a></li>
             <li><a href="/Register">Register</a></li>
         </ul>

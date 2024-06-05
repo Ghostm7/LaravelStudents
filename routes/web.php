@@ -7,7 +7,10 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
-
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ServicesController;
+use App\Http\Controllers\ContactUsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +45,15 @@ Route::get('student/{id}', [StudentController::class, 'show'])->name('students.s
 Route::get('student/{id}/edit', [StudentController::class, 'edit'])->name('students.edit');
 Route::put('student/{id}', [StudentController::class, 'update'])->name('students.update');
 Route::delete('student/{id}', [StudentController::class, 'destroy'])->name('students.destroy');
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('about', [AboutController::class, 'index'])->name('about');
+
+
+Route::get('/service', [ServicesController::class, 'index'])->name('service');
+
+Route::get('contact-us', [ContactUsController::class, 'index'])->name('contact_us');
 
 
 
