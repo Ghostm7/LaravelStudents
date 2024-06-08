@@ -3,6 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Web Layout</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+</head>
+<body>
+    <div class="container">
+        {{ $slot }}
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <!-- Bootstrap CSS -->
@@ -10,7 +24,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
-        <a class="navbar-brand text-white" href="#">Ghost University</a>
+        <a class="navbar-brand text-white" href="#">Ghost </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,7 +41,7 @@
     </nav>
 
     <main class="container mt-5">
-        @yield('content')
+        {{ $slot }}
     </main>
 
     <footer>

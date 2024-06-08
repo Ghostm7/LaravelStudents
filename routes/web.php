@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\PermissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,18 @@ use App\Http\Controllers\ContactUsController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/permissions', [PermissionController::class, 'index'])->name('permissions.index');
+
+Route::get('permissions/{permission}/edit', [PermissionController::class, 'edit'])->name('permissions.edit');
+
+
+
+
+
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
